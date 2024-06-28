@@ -1,9 +1,5 @@
 const cacheName = "EveryBali-EveryBali WGL-1.0.0";
 const contentToCache = [
-    "Build/everybali-wgl-uni6.loader.js",
-    "Build/everybali-wgl-uni6.framework.js.unityweb",
-    "Build/everybali-wgl-uni6.data.unityweb",
-    "Build/everybali-wgl-uni6.wasm.unityweb",
     "TemplateData/style.css"
 
 ];

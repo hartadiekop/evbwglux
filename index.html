@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <body>
-    <div id="unity-container">
+  <body style="text-align:center; vertical-align:middle;">
+    <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=540 height=960 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -51,7 +51,7 @@
           setTimeout(function() {
             warningBanner.removeChild(div);
             updateBannerVisibility();
-          }, 5000);
+          }, 10);
         }
         updateBannerVisibility();
       }
@@ -83,6 +83,15 @@
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+
+      } else {
+
+        canvas.style.width = "378px";
+        canvas.style.height = "100%";
       }
 
       loadingBar.style.display = "block";
